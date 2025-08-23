@@ -1,0 +1,285 @@
+/*      全局样式        */
+*{
+    padding: 0;
+    margin:0;
+}
+/*      头部样式        */
+header{
+    background-color:#28456f ;
+    height:80px;
+
+}
+h1{
+    color:white;
+    position:absolute;
+    top:0;
+    left:120px;
+    line-height:80px;
+    background-repeat:repeat-y;
+    background-position: center;
+}
+header a{
+    color:white;
+    text-decoration:none;
+}
+header a:hover{
+    text-decoration:underline;
+}
+header li{
+    display:inline;
+    margin-right:4vw;
+}
+header ul{
+    position:absolute;
+    right:5vw;
+    top:0;
+    line-height: 80px;
+}
+/*      主体背景        */
+.bgScene{
+    display: flex;
+    min-height: 1080px;
+    color:deepskyblue;
+    background-image:url("images/scene.jpg");
+    background-size:cover;
+    background-position:center;
+
+}
+/*      侧边栏     */
+#fullMenu{
+    display:flex;
+    align-items: center;
+    height:1080px;
+    width:14%;
+    margin:  0;
+    padding: 0;
+    border-radius: 1px;
+}
+/*      菜单        */
+#menu {
+    align-self: stretch;
+    width:91%;
+    margin:  0;
+    padding: 0;
+    background-color: rgba(0, 191, 255, 0.6);
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*  折叠  */
+#sideButton{
+    display: grid;
+    position:relative;
+    place-items: center;
+    height:20%;
+    font-size:20px;
+    color: rgba(85, 185, 234, 0.44);
+    /*writing-mode: vertical-rl;*/
+    /*letter-spacing: 2vw;*/
+    gap:0;
+    width:9%;
+    background-color:rgba(0, 191, 255, 0.3);
+    border:1px solid rgba(92,184,162,0);
+    border-radius: 1px 30px 30px 1px;
+}
+#sideButton:hover{
+    background-color: rgb(59, 98, 154);
+    border:1px solid white;
+    color:white;
+    cursor:pointer;
+}
+
+.menu-container{
+    width:100%;
+    height:30%;
+}
+.menu-container div{
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:20px;
+    width:100%;
+    height:20%;
+    background-color: rgb(47 116 159 / 70%);
+    margin:0 0;
+    padding:8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.menu-container div:hover{
+    border: 1px white solid;
+    background-color: #3b629a;
+}
+/*      装饰用        */
+#blank{
+    width:100%;
+    height: 100%;
+    background-image: url("images/hbrEmo.png");
+    background-size:720%;
+
+    background-position-x: -400px;
+    background-position-y:-1130px ;
+    /*border: 2px white solid; !* 临时调试边框 *!*/
+    /*min-height: 200px; !* 确保有最小高度 *!*/
+    animation: icoAni 60s linear 0ms infinite;
+}
+#blank:hover{
+    border:1px solid #689aba;
+    border-radius:5px;
+}
+@keyframes  icoAni{
+    0%{
+        background-position-x: -400px;
+        background-position-y:-14px ;
+    }
+    16%{
+        background-position-x: -400px;
+        background-position-y:-1130px ;
+    }
+    21%{
+        background-position-x: -630px;
+        background-position-y:-1130px ;
+    }
+    37%{
+        background-position-x: -630px;
+        background-position-y:-14px ;
+    }
+    42%{
+        background-position-x: -853px;
+        background-position-y:-14px ;
+    }
+    58%{
+        background-position-x: -853px;
+        background-position-y:-1130px ;
+    }
+    63%{
+        background-position-x: -1082px;
+        background-position-y:-1130px ;
+    }
+    79%{
+        background-position-x: -1082px;
+        background-position-y:-14px ;
+    }
+
+    84%{
+        background-position-x: -1320px;
+        background-position-y:-14px ;
+    }
+    100%{
+        background-position-x: -1320px;
+        background-position-y:-1130px ;
+    }
+
+}
+
+/*      功能区基本装饰     */
+#SymFun{
+
+    width:90%;
+
+}
+/*      查询部分        */
+.query{
+    position:relative;
+    top:1vw;
+    left:0;
+    height:30%;
+    width:100%;
+    float: right;
+}
+/*文本框*/
+.query input[type="text"]{
+    width:70%;
+    height:50px;
+    background-color: rgba(29, 119, 158, 0.3);
+    border:1px solid #4784a4;
+    border-radius:5px;
+    font-size: 20px;
+    color:#4784a4;
+}
+.query input[type="text"]::placeholder {
+    color: #6ba3c4;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+/* 文本框获得焦点时的样式 - 仅添加简单效果 */
+.query input[type="text"]:focus {
+    border: 2px solid #28456f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 69, 111, 0.5);
+    border-radius:5px;
+    /* 移除 transform: scale(1.02); */
+    /* 移除 background-color 改变 */
+}
+/* 使用更具体的选择器，增加 !important 确保样式生效 */
+.query input[type="text"]:not(:placeholder-shown) {
+    background-color: rgba(8, 84, 117, 0.1); /* 与原背景一致 */
+    border: 2px solid #1a2e4a;
+    color:white;
+    font-weight: 500;
+}
+/*按钮*/
+.query input[type="button"]{
+    width:6%;
+    height:50px;
+    background-color: #28456f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius:5px;
+    margin: 0 0;
+}
+.query input[type="button"]:hover {
+    background-color: #1a2e4a;
+}
+/*
+选单
+ */
+.querySelect {
+    width: 10%;
+    height: 50px;
+    background-color: #28456f;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+}
+
+/* 展开时的动画 */
+.querySelect:focus {
+    outline: none;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    background-color: #28456f;
+}
+
+/* 选项样式 */
+.querySelect option {
+    background-color: #28456f;
+    color: white;
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+
+
+/*      底部      */
+footer{
+    background-color:#4784a4;
+    display:flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+}

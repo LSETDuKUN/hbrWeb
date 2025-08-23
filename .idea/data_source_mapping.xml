@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/b0624d2b-3e14-4ec2-ac42-c091760c7950/console.sql" value="b0624d2b-3e14-4ec2-ac42-c091760c7950" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hbr/CharacterDao.java" value="b0624d2b-3e14-4ec2-ac42-c091760c7950" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hbr/HbrDao.java" value="b0624d2b-3e14-4ec2-ac42-c091760c7950" />
+  </component>
+</project>

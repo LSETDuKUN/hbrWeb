@@ -4,4 +4,20 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>TeamServlet</servlet-name>
+        <servlet-class>hbr.TeamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeamServlet</servlet-name>
+        <url-pattern>/api/team</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>hbr.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
 </web-app>
